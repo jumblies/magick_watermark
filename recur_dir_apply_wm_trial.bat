@@ -13,7 +13,7 @@ magick convert ^
   -compose Over -composite ^
   %%f)
 )
-pause
+
 magick convert -delay 20 -loop 0 *.jpg %datef%_loop.gif
 mv %datef%_loop.gif C:\Users\GLAMKE\Desktop\garageCam\
 for %%f in (*.jpg) do del %%f
