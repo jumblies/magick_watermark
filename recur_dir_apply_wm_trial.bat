@@ -1,4 +1,5 @@
 @echo
+set datef=%date:~10,4%%date:~4,2%%date:~7,2%
 for /D %%d in (*) do cd %%d
 echo directory changed to %%d
 for %%f in (*.jpg) do (
@@ -12,8 +13,9 @@ magick convert ^
   -compose Over -composite ^
   %%f)
 )
-magick convert -delay 10 -loop 0 *.jpg %date:~10,4%%date:~7,2%%date:~4,2%_loop.gif
-mv %date:~10,4%%date:~7,2%%date:~4,2%_loop.gif C:\Users\GLAMKE\Desktop\garageCam\
+pause
+magick convert -delay 20 -loop 0 *.jpg %datef%_loop.gif
+mv %datef%_loop.gif C:\Users\GLAMKE\Desktop\garageCam\
 for %%f in (*.jpg) do del %%f
 cd..
 for /D %%d in (*) do rmdir %%d
