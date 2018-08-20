@@ -7,9 +7,14 @@ magick convert ^
   %%f ^
   C:\Users\GLAMKE\Desktop\garageCam\wm_mark.png ^
   -gravity northwest ^
+  -geometry +20+20 ^
   -compose Over -composite ^
-   C:\Users\GLAMKE\Desktop\garageCam\wm_mark.png ^
+  C:\Users\GLAMKE\Desktop\garageCam\wm_mark.png ^
+  -gravity center ^
+  -compose Over -composite ^
+  C:\Users\GLAMKE\Desktop\garageCam\wm_mark.png ^
   -gravity southeast ^
+  -geometry +20+20 ^
   -compose Over -composite ^
   %%f)
 )
@@ -21,11 +26,6 @@ cd..
 for /D %%d in (*) do rmdir %%d
 for %%f in (*.gif) do start "" %%f
 REM exit/b
-
-
-
-
-
 
 
 :watermark
