@@ -1,7 +1,7 @@
 @echo
 
 robocopy ^
-\\10.10.10.143\motioneye\Camera2\ ^
+\\10.10.10.143\motioneye\Camera3\ ^
 c:\Users\GLAMKE\Desktop\garageCam\ ^
  *.jpg ^
 /S /MOV
